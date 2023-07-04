@@ -12,7 +12,8 @@ add_executable(${PROJECT_NAME} main.c)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
-add_library(math src/math/vec.c)
+#adding math library
 
+add_library(math src/math/vec.c)
 target_include_directories(math PRIVATE ${PROJECT_SOURCE_DIR}/include/math)
 target_link_libraries(${PROJECT_NAME} PRIVATE math)
