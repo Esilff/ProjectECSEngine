@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(ProjectECS-Engine VERSION 0.0.1)
+project(ProjectECS-Engine VERSION 0.0.0)
 
 set(EXECUTABLE_NAME "${PROJECT_NAME}-${PROJECT_VERSION}")
 
@@ -10,11 +10,9 @@ add_subdirectory(src)
 
 add_executable(${PROJECT_NAME} main.c)
 
-
-
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 add_library(math src/math/vec.c)
 
-target_include_directories(math PUBLIC ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(math PRIVATE ${PROJECT_SOURCE_DIR}/include/math)
 target_link_libraries(${PROJECT_NAME} PRIVATE math)
