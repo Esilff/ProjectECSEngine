@@ -1,5 +1,5 @@
 add_library(math math/vec.c)
 target_include_directories(math PRIVATE ${PROJECT_SOURCE_DIR}/include/math)
 
-add_library(debug debug/debug.c)
-target_include_directories(debug PRIVATE ${PROJECT_SOURCE_DIR}/include/debug)
+add_library(logger logger/logger.c)
+target_include_directories(logger PRIVATE ${PROJECT_SOURCE_DIR}/include/logger)

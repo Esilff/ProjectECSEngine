@@ -9,12 +9,12 @@ enum loglevel {
 
 typedef enum loglevel LogLevel;
 
-struct debug {
+struct logger {
     void (*log)(const char* message, LogLevel level);
 };
 
-typedef struct debug Debug;
+typedef struct logger Logger;
 
-Debug getDebugger();
+Logger getLogger();
 
 #endif
