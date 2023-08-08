@@ -14,3 +14,5 @@ add_executable(${PROJECT_NAME} main.c)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE math logger)
+
+add_compile_definitions(SOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
